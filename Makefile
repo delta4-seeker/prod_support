@@ -6,7 +6,6 @@ colorBlue='\033[0;34m'
 check_all:
 	@bash -c "source main.sh;icon_bridge_status" 
 
-	@echo  
 	@echo -e ${colorGreen}==================================================================
 	@echo -e ${colorReset}
 	@echo  
@@ -16,7 +15,6 @@ check_all:
 	@echo  
 	@echo -e ${colorGreen}==================================================================
 	@echo -e ${colorReset}
-	@echo  
 
 	@bash -c "source main.sh;check_ibc_status"     
 
