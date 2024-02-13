@@ -10,7 +10,19 @@ check_all:
 	@echo -e ${colorReset}
 	@echo  
 
-	@bash -c "source main.sh;check_balance" 
+	@bash -c "source main.sh;check_testnet_relay_balance" 
+
+	@echo -e ${colorGreen}==================================================================
+	@echo -e ${colorReset}
+	@echo  
+
+	@bash -c "source main.sh;check_relay_balance" 
+
+	@echo -e ${colorGreen}==================================================================
+	@echo -e ${colorReset}
+	@echo  
+
+	@bash -c "source main.sh;check_deployer_balance" 
 
 	@echo  
 	@echo -e ${colorGreen}==================================================================
@@ -20,11 +32,14 @@ check_all:
 
 
 
-check_balance:
-	bash -c "source main.sh;check_balance"     
+check_relay_balance:
+	@bash -c "source main.sh;check_relay_balance"     
+
+check_deployer_balance:
+	@bash -c "source main.sh;check_deployer_balance"     
 
 check_ibc_status:
-	bash -c "source main.sh;check_ibc_status"     
+	@bash -c "source main.sh;check_ibc_status"     
 
 icon_bridge_status:
-	bash -c "source main.sh;icon_bridge_status"     
+	@bash -c "source main.sh;icon_bridge_status"     
